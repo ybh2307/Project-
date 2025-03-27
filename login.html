@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!--<meta name=description content="This site was generated with Anima. www.animaapp.com"/>-->
+    <!-- <link rel="shortcut icon" type=image/png href="https://animaproject.s3.amazonaws.com/home/favicon.png" /> -->
+    <meta name="viewport" content="width=1920, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+    <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
+    <link rel="stylesheet" type="text/css" href="css/globals.css" />
+  </head>
+  <body style="margin: 0; background: #daecfa">
+    <input type="hidden" id="anPageName" name="page" value="login" />
+    <div class="container-center-horizontal">
+      <form
+        class="login screen"
+        onclick="window.open('javascript:SubmitForm(%27form1%27)', '_self');"
+        name="form1"
+        action="form1"
+        method="post"
+      >
+        <div class="image">
+          <div class="group-container">
+            <img class="group" src="img/group-460@2x.png" alt="Group" />
+            <img class="group-1" src="img/group-461@2x.png" alt="Group" />
+            <img class="group-2" src="img/group-462@2x.png" alt="Group" />
+            <img class="group-3" src="img/group-463@2x.png" alt="Group" />
+          </div>
+        </div>
+        <div class="cancer-detection archivo-bold-picton-blue-28px">Cancer Detection</div>
+        <div class="container-2 container">
+          <h1 class="title">Welcome back</h1>
+          <div class="please-enter-your-details">Please enter your details</div>
+          <div class="textbox-1">
+            <div class="enter-your-email archivo-bold-eerie-black-24px">Enter your email</div>
+            <div class="textfield"><div class="text archivo-normal-eerie-black-18px"></div></div>
+          </div>
+          <div class="textbox-1-1">
+            <div class="password archivo-bold-eerie-black-24px">Password</div>
+            <div class="textfield"><div class="text archivo-normal-eerie-black-18px"></div></div>
+          </div>
+          <div class="flex-row">
+            <div class="checkbox-1">
+              <div class="rectangle"></div>
+              <div class="remember archivo-normal-eerie-black-20px">Remember</div>
+            </div>
+            <div class="forgot-password archivo-bold-eerie-black-20px">Forgot password</div>
+          </div>
+          <div class="button-1"><div class="sign-in archivo-normal-white-24px">Sign in</div></div>
+          <div class="container-1 container">
+            <div class="google-1">
+              <div class="group-4"></div>
+            </div>
+            <div class="textbox-2"><div class="sign-in-with-google">Sign in with Google</div></div>
+          </div>
+          <p class="dont-have-an-account-sign-up-here">Don&#39;t have an account? Sign up here</p>
+        </div>
+      </form>
+    </div>
+    <script>
+      /* Copyright (c) 2016 Tobias Buschor https://goo.gl/gl0mbf | MIT License https://goo.gl/HgajeK */
+
+      if (!HTMLFormElement.prototype.reportValidity) {
+        HTMLFormElement.prototype.reportValidity = function () {
+          if (this.checkValidity()) return true;
+          var btn = document.createElement("button");
+          this.appendChild(btn);
+          btn.click();
+          this.removeChild(btn);
+          return false;
+        };
+      }
+
+      function SubmitForm(form_name) {
+        var form = document.getElementsByName(form_name)[0];
+        if (form.reportValidity()) {
+          form.submit();
+          if (window.submitted) window.submitted();
+        }
+      }
+    </script>
+  </body>
+</html>
